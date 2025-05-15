@@ -1,0 +1,12 @@
+package com.it.test;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.it.cfg.AppConfig;
+
+public class Test {
+	public static void main(String[] args) {
+		
+		ApplicationContext context=new AnnotationConfigApplicationContext(AppConfig.class);
+	}
+}

@@ -1,0 +1,5 @@
+package com.it.dao;
+
+public class IReportDao {
+	public void generateReport();
+}

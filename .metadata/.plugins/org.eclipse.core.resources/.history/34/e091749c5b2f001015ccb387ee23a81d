@@ -1,0 +1,14 @@
+package com.it;
+
+public class MainClass {
+	public static void main(String[] args) {
+//		Car car=new Car();
+//		car.drive();
+		
+		PetrolEngine pe=new PetrolEngine();
+//		Car2 car=new Car2(pe);
+		Car2 car=new Car2();
+		car.setEng(pe);
+		car.drive();
+	}
+}

@@ -1,0 +1,29 @@
+package com.it.beans;
+
+import org.springframework.beans.factory.InitializingBean;
+
+public class Motor implements InitializingBean, 
+{
+	public Motor() {
+		System.out.println("Motor.Motor() :: constructor");
+	}
+	
+//	public void start()
+//	{
+//		System.out.println("Motor starting...");
+//	}
+
+	public void doWork()
+	{
+		System.out.println("Motor Pulling the water...");
+	}
+	
+	
+	
+//	public void stop()
+//	{
+//		System.out.println("Motor stopped.");
+//	}
+	
+	
+}

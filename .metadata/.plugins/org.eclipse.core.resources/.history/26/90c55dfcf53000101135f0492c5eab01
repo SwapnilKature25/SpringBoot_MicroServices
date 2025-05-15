@@ -1,0 +1,26 @@
+package com.it.beans;
+
+public class Motor {
+	public Motor() {
+		System.out.println("Motor.Motor()");
+	}
+	
+	public void start()
+	{
+		System.out.println("Motor starting...");
+	}
+
+	public void doWork()
+	{
+		System.out.println("Motor Pulling the water...");
+	}
+	
+	
+	
+	public void stop()
+	{
+		System.out.println("Motor stopped.");
+	}
+	
+	
+}

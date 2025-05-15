@@ -1,0 +1,11 @@
+package com.it.service;
+
+public class ExcelReport implements IReport
+{
+
+	@Override
+	public void generateReport() {
+		System.out.println("Excel report generated");
+	}
+
+}

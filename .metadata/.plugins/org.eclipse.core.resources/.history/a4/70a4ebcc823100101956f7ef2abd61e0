@@ -1,0 +1,8 @@
+package com.ibm.service;
+
+@Service
+public class TriggerService {
+	public TriggerService() {
+		System.out.println("TriggerService.TriggerService():: Constructor");
+	}
+}

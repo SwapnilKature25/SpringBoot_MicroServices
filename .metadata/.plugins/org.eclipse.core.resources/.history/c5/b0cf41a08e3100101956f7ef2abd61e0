@@ -1,0 +1,11 @@
+package com.it.service;
+
+public class PdfReport implements IReport
+{
+
+	@Override
+	public void generateReport() {
+		System.out.println("PDF report generating....");
+	}
+
+}

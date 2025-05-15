@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;com.it.beans&apos; to &apos;02-IOC-DIApp/src/main/java&apos;&#x0D;&#x0A;- Original project: &apos;01-IOC-DIApp&apos;&#x0D;&#x0A;- Destination element: &apos;02-IOC-DIApp/src/main/java&apos;&#x0D;&#x0A;- Original element: &apos;01-IOC-DIApp/src/main/java/com.it.beans&apos;" description="Copy package" destination="=02-IOC-DIApp/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.it.beans" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1747199448609" version="1.0"/>
+</session>

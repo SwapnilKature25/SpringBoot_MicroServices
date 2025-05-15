@@ -1,0 +1,7 @@
+package com.it.beans;
+
+public class Car {
+	private IEngine eng;
+	
+	public void IEngine 
+}

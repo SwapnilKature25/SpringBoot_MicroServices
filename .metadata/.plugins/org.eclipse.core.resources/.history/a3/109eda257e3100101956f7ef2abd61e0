@@ -1,0 +1,10 @@
+package com.it.beans;
+
+import org.apache.maven.plugins.annotations.Component;
+
+@Component
+public class Car {
+	public Car() {
+		System.out.println("Car::constructor");
+	}
+}

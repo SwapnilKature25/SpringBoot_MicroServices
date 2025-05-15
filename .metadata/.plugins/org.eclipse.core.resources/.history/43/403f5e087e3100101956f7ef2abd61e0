@@ -1,0 +1,5 @@
+package com.it.beans;
+
+public class UserDao {
+
+}

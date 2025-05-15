@@ -1,0 +1,16 @@
+package com.it;
+
+public class Car2 {
+	private IEngine eng;
+	
+	public void drive()
+	{
+		int start=eng.start();
+		if(start>=1)
+		{
+			System.out.println("Journey started");
+		}
+		else 
+			System.out.println("Engine in trouble...");
+	}
+}

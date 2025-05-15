@@ -1,0 +1,9 @@
+package com.it;
+
+public class Car {
+	public void drive()
+	{
+//		start the engine
+//		start the journey
+	}
+}

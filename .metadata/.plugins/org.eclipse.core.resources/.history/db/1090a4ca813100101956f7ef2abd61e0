@@ -1,0 +1,8 @@
+package com.it.util;
+
+
+public class EmailUtils {
+	public EmailUtils() {
+		System.out.println("EmailUtils.EmailUtils():: constructor");
+	}
+}

@@ -1,0 +1,7 @@
+package com.it.beans;
+
+public class AppConfig {
+	public AppConfig() {
+		System.out.println("AppConfig.AppConfig()");
+	}
+}

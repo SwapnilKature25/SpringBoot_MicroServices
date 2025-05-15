@@ -1,0 +1,13 @@
+package com.it.beans;
+
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@ComponentScan(basePackages = {"com.it"} )    // it will identify(search) spring bean classes available in the project
+public class AppConfig {
+	public AppConfig() {
+		System.out.println("AppConfig.AppConfig()");
+	}
+}
+ 

@@ -1,0 +1,11 @@
+package com.it.main;
+
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.core.io.ClassPathResource;
+
+public class Main {
+	public static void main(String[] args) {
+		// starting IOC container
+//		BeanFactory factory=new XmlBeanFactory(new ClassPathResource("Beans.xml"));  // XmlBeanFactory has been deprecated and removed from spring 5v
+	}
+}

@@ -14,7 +14,7 @@
     <plugins>
       <plugin>
         <groupId> com.it</groupId>
-        <artifactId>05-Spring-Annotation-AutowireApp</artifactId>
+        <artifactId>02-IOC-DIApp</artifactId>
         <configuration>
           <!-- Specify the MyMojo parameter -->
           <outputDirectory>target/test-harness/project-to-test</outputDirectory>

@@ -54,5 +54,12 @@
 			<attribute name="m2e-apt" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/swapn/Desktop/Spring Jars/spring-aop-6.2.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/swapn/Desktop/Spring Jars/spring-beans-6.2.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/swapn/Desktop/Spring Jars/spring-context-6.2.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/swapn/Desktop/Spring Jars/spring-context-support-6.2.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/swapn/Desktop/Spring Jars/spring-core-6.2.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/swapn/Desktop/Spring Jars/spring-expression-6.2.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/swapn/Desktop/Spring Jars/spring-jcl-6.2.4.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

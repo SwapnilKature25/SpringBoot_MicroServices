@@ -1,0 +1,12 @@
+spring:
+  datasource: 
+    url: null
+    username: null
+    password: null
+    driver-class-name: null
+    
+  main:
+    banner-mode: off
+    
+  application:
+    name: 

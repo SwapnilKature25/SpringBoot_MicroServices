@@ -1,6 +1,0 @@
-package com.it;
-
-public class PetrolEngine implements IEngine
-{
-
-}

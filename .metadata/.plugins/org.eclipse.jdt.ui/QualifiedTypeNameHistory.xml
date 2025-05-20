@@ -23,4 +23,9 @@
     <fullyQualifiedTypeName name="javax.inject.Qualifier"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Qualifier"/>
     <fullyQualifiedTypeName name="com.it.service.ReportService"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Table"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Id"/>
+    <fullyQualifiedTypeName name="org.springframework.data.repository.CrudRepository"/>
+    <fullyQualifiedTypeName name="ch.qos.logback.core.util.COWArrayList"/>
+    <fullyQualifiedTypeName name="com.it.repository.StudentRepository"/>
 </qualifiedTypeNameHistroy>

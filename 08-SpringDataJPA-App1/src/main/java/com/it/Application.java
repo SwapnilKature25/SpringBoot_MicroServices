@@ -1,6 +1,7 @@
 package com.it;
 
-import java.util.Optional;
+import java.util.Arrays;
+import java.util.List;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -23,6 +24,35 @@ public class Application {
 		StudentRepository studentRepository = context.getBean(StudentRepository.class);
 //		System.out.println(studentRepository.getClass().getName());    // jdk.proxy2.$Proxy97
 		
+		/* 
+			saveAll()
+		Student s1=new Student(103, "Allen", "Male", 111l);
+		Student s2=new Student(104, "Jane", "Female", 11l);
+		Student s3=new Student(105, "Mike", "Male", 112l);
+		Student s4=new Student(106, "Max", "Female", 113l);
+		
+		List<Student> students = Arrays.asList(s1,s2,s3,s4);
+		
+		studentRepository.saveAll(students);  // all the students are accepting in the table at a time 
+		*/
+		
+		
+//		List<Student> maleStudents = studentRepository.findByGender("Male");
+//		maleStudents.forEach(System.out::println);
+		
+//		List<Student> studentss = studentRepository.findByRankGreaterThanEqual(100);
+//		studentss.forEach(System.out::println);
+		
+//		List<Student> studs = studentRepository.findByRankLessThanEqual(100);
+//		studs.forEach(System.out::println);
+		
+		List<Student> stds = studentRepository.findByGenderAndRankGreaterThanEqual("Male", 100l);
+		stds.forEach(System.out::println);
+		
+		
+		
+		
+		/*  -->
 		Student s=new Student();
 		s.setId(112);
 		s.setName("Raja");
@@ -62,7 +92,11 @@ public class Application {
 		System.out.println("  -------------------   ");
 		
 		long count = studentRepository.count();
-		System.out.println("Records Count : "+count);		
+		System.out.println("Records Count : "+count);  <-- */		
+		
+		
+		
+		
 		/* 
 		1]  save()
 		Hibernate: select s1_0.student_id,s1_0.student_gen,s1_0.student_name,s1_0.student_rank from student_dtls s1_0 where s1_0.student_id=?
@@ -89,6 +123,38 @@ public class Application {
 		5] count()
 		Hibernate: select count(*) from student_dtls s1_0
 		Records Count : 1
+		 
+		6] saveAll()
+		Hibernate: select s1_0.student_id,s1_0.student_gen,s1_0.student_name,s1_0.student_rank from student_dtls s1_0 where s1_0.student_id=?
+		Hibernate: select s1_0.student_id,s1_0.student_gen,s1_0.student_name,s1_0.student_rank from student_dtls s1_0 where s1_0.student_id=?
+		Hibernate: select s1_0.student_id,s1_0.student_gen,s1_0.student_name,s1_0.student_rank from student_dtls s1_0 where s1_0.student_id=?
+		Hibernate: select s1_0.student_id,s1_0.student_gen,s1_0.student_name,s1_0.student_rank from student_dtls s1_0 where s1_0.student_id=?
+		
+		
+		7] findByXXX()  
+		findByGender()
+		Hibernate: select s1_0.student_id,s1_0.student_gen,s1_0.student_name,s1_0.student_rank from student_dtls s1_0 where s1_0.student_gen=?
+		Student [id=103, name=Allen, gender=Male, rank=111]
+		Student [id=105, name=Mike, gender=Male, rank=112]
+		Student [id=112, name=Raja, gender=Male, rank=12]
+		 
+		8] findByRankGreaterThanEqual(100l)
+		Hibernate: select s1_0.student_id,s1_0.student_gen,s1_0.student_name,s1_0.student_rank from student_dtls s1_0 where s1_0.student_rank>=?
+		Student [id=103, name=Allen, gender=Male, rank=111]
+		Student [id=105, name=Mike, gender=Male, rank=112]
+		Student [id=106, name=Max, gender=Female, rank=113]
+		
+		9] findByRankLessThanEqual(100l)
+		Hibernate: select s1_0.student_id,s1_0.student_gen,s1_0.student_name,s1_0.student_rank from student_dtls s1_0 where s1_0.student_rank<=?
+		Student [id=104, name=Jane, gender=Female, rank=11]
+		Student [id=112, name=Raja, gender=Male, rank=12]
+		 
+		 
+		10] findByGenderAndRankGreaterThanEqual("Male", 100l)
+		Hibernate: select s1_0.student_id,s1_0.student_gen,s1_0.student_name,s1_0.student_rank from student_dtls s1_0 where s1_0.student_gen=? and s1_0.student_rank>=?
+		Student [id=103, name=Allen, gender=Male, rank=111]
+		Student [id=105, name=Mike, gender=Male, rank=112]
+		 
 		 **/
 	}
 

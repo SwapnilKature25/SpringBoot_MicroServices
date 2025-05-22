@@ -1,7 +1,0 @@
-package com.it.report;
-
-public class ReportService {
-	public ReportService() {
-		
-	}
-}

@@ -1,8 +1,0 @@
-package com.nit.main;
-
-public class App {
-	public static void main(String[] args) {
-		
-		ApplicationContext
-	}
-}

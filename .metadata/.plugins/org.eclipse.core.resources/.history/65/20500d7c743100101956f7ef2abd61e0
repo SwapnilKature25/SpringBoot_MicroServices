@@ -1,7 +1,0 @@
-package com.it.beans;
-
-
-@Component
-public class Car {
-
-}

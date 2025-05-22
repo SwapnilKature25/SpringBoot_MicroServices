@@ -1,8 +1,0 @@
-package com.it.beans;
-
-@Configuaration
-public class AppConfig {
-	public AppConfig() {
-		System.out.println("AppConfig.AppConfig()");
-	}
-}

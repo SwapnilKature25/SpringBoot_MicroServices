@@ -87,4 +87,12 @@
 		<item key="DIALOG_HEIGHT" value="869"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 	</section>
+	<section name="nls_accessor_history">
+		<section name="0">
+			<item key="accessorName" value="Messages"/>
+			<item key="accessorPackage" value="=08-SpringDataJPA-KeysInDB/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.it"/>
+			<item key="bundleName" value="messages.properties"/>
+			<item key="bundlePackage" value="=08-SpringDataJPA-KeysInDB/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.it"/>
+		</section>
+	</section>
 </section>

@@ -1,0 +1,15 @@
+# Conversion to YAML from Properties formar report
+# Warnings:
+# - The yaml file had comments which are lost in the refactoring!
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/sbms27
+    username: root
+    password: Swap25
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 20
+  jpa:
+     hibernate:
+      ddl-auto: update
+     show-sql: true

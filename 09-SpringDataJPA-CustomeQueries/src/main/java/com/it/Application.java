@@ -12,6 +12,12 @@ import com.it.repository.StudentRepository;
 @SpringBootApplication
 public class Application {
 
+    private final StudentRepository studentRepository;
+
+    Application(StudentRepository studentRepository) {
+        this.studentRepository = studentRepository;
+    }
+
 	public static void main(String[] args) {
 		ConfigurableApplicationContext context = SpringApplication.run(Application.class, args);
 		StudentRepository studentRepository = context.getBean(StudentRepository.class);
@@ -43,10 +49,15 @@ public class Application {
 	
 		
 //		6
-		List<Object[]> stdRankGender = studentRepository.getStdRankGender();
+//		List<Object[]> stdRankGender = studentRepository.getStdRankGender();
 //		stdRankGender.forEach(System.out::println);   // it will print only address of objects
-		stdRankGender.forEach(row -> System.out.println("Rank: " + row[0] + ", Gender: " + row[1]));
+//		stdRankGender.forEach(row -> System.out.println("Rank: " + row[0] + ", Gender: " + row[1]));
 
+//		assignment : deleting a student
+		studentRepository.deleteStudent(112);
+		System.out.println("Student deleted...");
+		
+		
 	}
 
 }
@@ -117,6 +128,11 @@ Rank: 112, Gender: Male
 Rank: 113, Gender: Female
 Rank: 121, Gender: null
 Rank: 12, Gender: Male
+
+
+assignement
+Hibernate: delete s1_0 from student_dtls s1_0 where s1_0.student_id=?
+Student deleted...
 
 
  */

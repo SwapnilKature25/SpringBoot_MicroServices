@@ -1,0 +1,15 @@
+# Conversion to YAML from Properties formar report
+# Warnings:
+# - The yaml file had comments which are lost in the refactoring!
+spring:
+  application:
+    name: 08-SpringDataJPA-App1
+  datasource:
+    url: jdbc:mysql://localhost:3306/sbms27
+    username: root
+    password: Swap25
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: 'create'
+    show-sql: 'true'

@@ -2,10 +2,13 @@ package com.it.repository;
 
 import java.util.List;
 
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
 import com.it.entity.Student;
+
+import jakarta.transaction.Transactional;
 
 //@Repository    // optional
 public interface StudentRepository extends CrudRepository<Student, Integer>
@@ -52,4 +55,11 @@ public interface StudentRepository extends CrudRepository<Student, Integer>
 	@Query("select rank,gender from Student")
 	public List<Object[]> getStdRankGender();
 	
+	// whenever we are performing any non-select operation through custom query we need to enable transactional annotation.
+	// for select operation transaction is not required but for non-select transactional is required.
+//	Assignment questions : delete student using HQL  ( :sid called as named position parameter)
+	@Query("delete from Student where id=:sid")
+	@Modifying   // 
+	@Transactional
+	public void deleteStudent(Integer sid);	
 }

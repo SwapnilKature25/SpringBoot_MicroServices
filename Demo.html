@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Book Info</h1>
+        <a href="#" class="btn btn-primary">Add New Book</a>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Book Id</th>
+                    <th>Book Name</th>
+                    <th>Book Price</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="book : ${books}">
+                    <td th:text="${book.bookId}"></td>
+                    <td th:text="${book.bookName}"></td>
+                    <td th:text="${book.bookPrice}"></td>
+                    <td>
+                        <a href="" class="btn btn-secondary">EDIT</a>
+                        <a href="" class="btn btn-danger">DELETE</a>
+                    </td>
+                </tr>
+
+                <tr th:if="${books.isEmpty()}">
+                    <div>
+                    </div>
+                    <td>No Record found</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+	</div>
+
+    <h2>Book Form</h2>
+    <p th:text="${succMsg}" style="color:green"></p>
+    <p th:text="${errMsg}" style="color: red;"></p>
+
+<!-- th:object  - Form to object mapping  -->
+    <form action="${/saveBook}"  th:object="${book}" method="post">
+        <table>
+            <tr>
+                <td>Book Name : </td>
+                <td> <input type="text" th:field="*{bookName}" /> </td>
+                <input type="hidden" th:field="*{bookId}"/>  // sending bookId as hidden variable
+            </tr>
+            <tr>
+                <td>Book Price : </td>
+                <!-- th:field  -  field to java class variable mapping  -->
+                <td> <input type="number" th:field="*{bookPrice}" /> </td>
+            </tr>
+
+             <tr>
+                <td></td>
+                <td> <input type="submit" value="SAVE" class="btn btn-primary"/> </td>
+            </tr>
+            
+        </table>
+
+        <script type="text/javascript">
+            function confirmDelete(){
+                return confirm("Are you sure, to delete?");
+            }
+        </script>
+
+        <a th:href="@{/edit?(bookId=${book.bookId})}"></a>
+
+    </form>
+    
+    <a href="books">View All Book</a>
+
+
+
+
+</body>
+</html>

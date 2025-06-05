@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\swapn\01CJ\Spring_Boot_MicroServices\20-Web_MVC-BookApp\src\main\java\com\it\controller\BookController.java"/>
 			<item value="C:\Users\swapn\01CJ\Spring_Boot_MicroServices\04-BeanLifecycle-App\src\main\java\com\it\main\MainApp.java"/>
 			<item value="C:\Users\swapn\01CJ\Spring_Boot_MicroServices\01-IOC-DIApp\pom.xml"/>
 			<item value="C:\Users\swapn\01CJ\Spring_Boot_MicroServices\01_IOC_DependencyInjectionApp\pom.xml"/>
@@ -29,17 +30,10 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="com.it"/>
-			<item value="com.it._Spring_AnnotationsApp"/>
 		</list>
 		<list key="groupId">
-			<item value=" com.it"/>
 		</list>
 		<list key="artifactId">
-			<item value="05-Spring-Annotation-AutowireApp"/>
-			<item value="05-Spring-AnnotationsApp"/>
-			<item value="04-BeanLifecycle-App"/>
-			<item value="02-IOC-DIApp"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

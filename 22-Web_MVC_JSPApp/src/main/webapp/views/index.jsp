@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<h1>This is index.jsp page</h1>
 	${msg}
 </body>
 </html>

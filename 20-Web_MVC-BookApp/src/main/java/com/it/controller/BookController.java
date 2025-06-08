@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
@@ -29,7 +30,7 @@ public class BookController {
 		return mav;		
 	}
 		
-	
+	/*    // 1
 	@GetMapping("/index")   // used to display empty form
 	public ModelAndView index() {
 		ModelAndView mav=new ModelAndView();
@@ -37,6 +38,19 @@ public class BookController {
 		mav.addObject("book", new Book());  // emty object data will not come ( it id comes it will treat it has a old record if not then it will create new record)
 		mav.setViewName("index");
 		return mav;
+	}   */
+	
+	/*  // 2
+	@GetMapping("/index")   // used to display empty form
+	public String index(Model model) {
+		model.addAttribute("book", new Book());  
+		return "index";
+	}  */
+
+		// 3
+	@GetMapping("/index")   // used to display empty form
+	public String index(@ModelAttribute("book") Book book) {
+		return "index";
 	}
 	
 	@PostMapping("/book")

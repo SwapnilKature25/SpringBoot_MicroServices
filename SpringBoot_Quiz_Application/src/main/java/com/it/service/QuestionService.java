@@ -42,9 +42,14 @@ public class QuestionService {
 		return new ResponseEntity(new ArrayList<>(),HttpStatus.BAD_REQUEST);			
 	}
 
-	public String addQuestion(Question question) {
+	public ResponseEntity<String> addQuestion(Question question) {
 		questionDao.save(question);
-		return "success";
+		return new ResponseEntity<>("success",HttpStatus.CREATED);
+	}
+
+	public ResponseEntity<String> deleteQuestion(Question question) {
+		questionDao.delete(question);
+		return new ResponseEntity<>("deleted",HttpStatus.CREATED);
 	} 
 	
 }	

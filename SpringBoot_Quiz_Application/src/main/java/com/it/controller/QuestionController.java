@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,6 +15,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.it.Question;
 import com.it.service.QuestionService;
 
+// HTTP response status codes  : https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status
+
 @RestController
 @RequestMapping("question")
 public class QuestionController {
@@ -21,6 +24,7 @@ public class QuestionController {
 	@Autowired
 	QuestionService questionService;
 	
+//	localhost:8080/question/allQuestions
 	// to handle exception
 	@GetMapping("allQuestions")
 	public ResponseEntity<List<Question>> getAllQuestions() {
@@ -33,7 +37,13 @@ public class QuestionController {
 	}
 	
 	@PostMapping("add")
-	public String addQuestion(@RequestBody Question question) {
+	public ResponseEntity<String> addQuestion(@RequestBody Question question) {
 		return questionService.addQuestion(question);
+	}
+	
+//	localhost:8080/question/delete
+	@DeleteMapping("delete")
+	public ResponseEntity<String> deleteQuestion(@RequestBody Question question) {
+		return questionService.deleteQuestion(question);
 	}
 }

@@ -30,10 +30,13 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.it._RestApi_JacksonApp"/>
 		</list>
 		<list key="groupId">
+			<item value="com.it"/>
 		</list>
 		<list key="artifactId">
+			<item value="24-RestApi-JacksonApp"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.it.Question;
+import com.it.model.Question;
 import com.it.service.QuestionService;
 
 // HTTP response status codes  : https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status

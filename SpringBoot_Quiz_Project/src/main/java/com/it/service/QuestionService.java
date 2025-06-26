@@ -9,8 +9,8 @@ import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import com.it.Question;
 import com.it.dao.QuestionDao;
+import com.it.model.Question;
 
 @Service
 public class QuestionService {

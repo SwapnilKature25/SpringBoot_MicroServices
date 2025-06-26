@@ -2,8 +2,6 @@ package com.it.model;
 
 import java.util.List;
 
-import com.it.Question;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;

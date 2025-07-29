@@ -17,7 +17,7 @@ public class Employee {
 	private Integer empId;
 	private String empName;
 	private Double empSalary;
-//	 whatever the operation i do on the parent i want that operation to be done on the child also for that CascadeType is ALL.
+//	 whatever the operation i do on the parent i want that operation to be done on the child also, for that CascadeType is ALL.
 //	 mappedBy will represent current addresses belongs to which employee.
 	@OneToMany(mappedBy = "emp", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private List<Address> addr;

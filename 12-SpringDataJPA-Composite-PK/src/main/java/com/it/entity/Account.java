@@ -11,7 +11,7 @@ public class Account {   // will represent normal data.
 	@EmbeddedId    // embeddedId is representing the class which are having all the primary keys.
 	private AccountPK accountPk;
 //	If we are having single column as PK then we can go for @Id annotation.
-//	If we want to represent more than one primary key in the table for all the primary will create one class. (i.e AccountPK) 
+//	If we want to represent more than one primary key in the table for all the primary key,we will create one class. (i.e AccountPK) 
 
 	
 	public String getHolderName() {

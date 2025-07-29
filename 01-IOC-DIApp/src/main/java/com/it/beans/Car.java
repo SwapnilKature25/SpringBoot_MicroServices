@@ -1,15 +1,19 @@
 package com.it.beans;
 
 public class Car {
+	
 	private IEngine eng;
+
 	
-	public Car() {
-		System.out.println("Car.Car()");
+	public Car(IEngine eng) {
+		super();
+        System.out.println("Constructor Injection called with: " + eng.getClass().getSimpleName());
+		this.eng = eng;
 	}
-	
+
 	public void setEng(IEngine eng)
 	{
-		System.out.println("setEng() method called...");
+        System.out.println("Setter Injection called with: " + eng.getClass().getName());
 		this.eng=eng;
 	}
 	

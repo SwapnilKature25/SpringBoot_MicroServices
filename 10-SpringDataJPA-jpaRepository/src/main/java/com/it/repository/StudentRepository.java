@@ -22,10 +22,10 @@ public interface StudentRepository extends JpaRepository<Student, Integer>
 		@Transactional  // it will represent JPA need to take care of the transaction required for this method.
 		public void deleteStudent(Integer sid);	
 
-		@Query("update Student set gender=:gender where id=:sid")
+		@Query("update Student set rank=:rank where id=:sid")
 		@Modifying 
 		@Transactional
-		public void updateStudent(Integer sid,String gender);
+		public void updateStudent(Integer sid,Long rank);
 		
 //		we can't do insertion directly with Custom HQL query, it is not possible -> we need to go for native SQL  (( but here it is runnig by both the methods ))
 //		@Query(value="insert into Student_dtls(student_id,student_name,student_gen,student_rank) values(:sid,:name,:gender,:rank)", nativeQuery = true)  // native sql query

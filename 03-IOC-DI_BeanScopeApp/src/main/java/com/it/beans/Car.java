@@ -3,9 +3,9 @@ package com.it.beans;
 public class Car {
 	private IEngine eng;
 	
-//	public Car() {
-//		System.out.println("Car.Car()::no parameterized const");
-//	}
+	public Car() {
+		System.out.println("Car.Car()::no parameterized const");
+	}
 	
 	public Car(IEngine eng)
 	{
@@ -14,11 +14,11 @@ public class Car {
 	}
 	
 	// setter injection
-//	public void setEng(IEngine eng)
-//	{
-//		System.out.println("setEng() method called...");
-//		this.eng=eng;
-//	}
+	public void setEng(IEngine eng)
+	{
+		System.out.println("Setter method : setEng() method called...");
+		this.eng=eng;
+	}
 	
 	
 	public void drive()

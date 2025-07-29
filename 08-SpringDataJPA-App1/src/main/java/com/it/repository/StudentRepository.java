@@ -13,7 +13,7 @@ public interface StudentRepository extends CrudRepository<Student, Integer>
 	// select * from student_dtls where student_gender is null;
 	public List<Student> findByGenderIsNull();
 	
-	// JPA will internally create above query as : 
+	// JPA will internally create below query as : 
 	// select * from student_dtls where student_rank >= :rank;
 	public List<Student> findByRankGreaterThanEqual(Integer rank);
 	

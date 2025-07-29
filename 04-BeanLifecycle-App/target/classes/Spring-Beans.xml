@@ -5,11 +5,10 @@
     xsi:schemaLocation="
         http://www.springframework.org/schema/beans  http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<!-- 
+	
 	<bean id="motor" class="com.it.beans.Motor" 
 					init-method="start"
 					destroy-method="stop"
-						/>   -->
+						/>   
 						
-	<bean id="motor" class="com.it.beans.Motor" />
-</beans> 
+ </beans> 

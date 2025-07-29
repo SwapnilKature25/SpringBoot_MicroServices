@@ -12,8 +12,11 @@ import com.it.repository.StudentRepository;
 
 @SpringBootApplication
 public class Application {
-
-    private final StudentRepository studentRepository;
+	
+//  You have two different ways of getting StudentRepository:
+//	You're injecting it in the constructor (but not using that object in main()), and then also manually fetching the bean inside main().
+	// Field Injection via Constructor
+	private final StudentRepository studentRepository;
 
     Application(StudentRepository studentRepository) {
         this.studentRepository = studentRepository;
@@ -21,7 +24,8 @@ public class Application {
 
 	public static void main(String[] args) {
 		ConfigurableApplicationContext context = SpringApplication.run(Application.class, args);
-		StudentRepository studentRepository = context.getBean(StudentRepository.class);
+		// Manual Bean Retrieval in main()
+		StudentRepository studentRepository = context.getBean(StudentRepository.class);  // This gives you an object that implements StudentRepository (behind the scenes, it's a proxy created by Spring Data JPA).	
 //		System.out.println(studentRepository.getClass().getName());    // jdk.proxy2.$Proxy97
 		
 		/* 

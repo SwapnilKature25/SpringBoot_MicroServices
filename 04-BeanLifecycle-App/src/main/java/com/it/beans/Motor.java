@@ -14,15 +14,15 @@ public class Motor implements InitializingBean, DisposableBean
 		System.out.println("Motor.Motor() :: constructor");
 	}
 	
-//	public void start()
-//	{
-//		System.out.println("Motor starting...");
-//	}
+	public void start()
+	{
+		System.out.println("Motor starting...");
+	}
 	
 	
 	@Override
 	public void afterPropertiesSet() throws Exception {
-		System.out.println("Programmatic approach : motor started....");
+		System.out.println("Programmatic approach (Interface Implementation) : motor started....");
 	}
 	
 	@PostConstruct
@@ -37,7 +37,7 @@ public class Motor implements InitializingBean, DisposableBean
 
 	@Override
 	public void destroy() throws Exception {
-		System.out.println("Programmatic approach : motor stopped..");
+		System.out.println("Programmatic approach (Interface Implementation) : motor stopped..");
 	}
 
 	@PreDestroy
@@ -47,10 +47,10 @@ public class Motor implements InitializingBean, DisposableBean
 	
 	
 	
-//	public void stop()
-//	{
-//		System.out.println("Motor stopped.");
-//	}
+	public void stop()
+	{
+		System.out.println("Motor stopped.");
+	}
 	
 	
 }

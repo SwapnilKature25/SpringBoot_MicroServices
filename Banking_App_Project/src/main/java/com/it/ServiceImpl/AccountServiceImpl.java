@@ -38,12 +38,7 @@ public class AccountServiceImpl implements AccountService
 		return AccountMapper.mapToAccountDto(account);
 	}
 	
-	@Override
-	public AccountDto getAllAccounts() {
-		List<Account> findAll = accRepository.findAll();
-		return AccountMapper.mapToAccountDto(findAll);
-	}
-
+	
 	@Override
 	public AccountDto deposit(Long id, double amount) {
 		Account account = accRepository

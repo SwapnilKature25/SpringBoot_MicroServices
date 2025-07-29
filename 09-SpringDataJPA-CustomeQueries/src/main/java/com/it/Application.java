@@ -11,12 +11,12 @@ import com.it.repository.StudentRepository;
 
 @SpringBootApplication
 public class Application {
-
-    private final StudentRepository studentRepository;
-
-    Application(StudentRepository studentRepository) {
-        this.studentRepository = studentRepository;
-    }
+//	  constructor injection
+//    private final StudentRepository studentRepository;
+//
+//    Application(StudentRepository studentRepository) {
+//        this.studentRepository = studentRepository;
+//    }
 
 	public static void main(String[] args) {
 		ConfigurableApplicationContext context = SpringApplication.run(Application.class, args);
@@ -37,9 +37,9 @@ public class Application {
 //		genNull.forEach(System.out::println);
 	
 //		4
-//		List<Student> highRank = studentRepository.getStudentHighRank(100l);
+		List<Student> highRank = studentRepository.getStudentHighRank(100l);
 //		List<Student> highRank = studentRepository.getStudentsHighRank(100l);
-//		highRank.forEach(System.out::println);
+		highRank.forEach(System.out::println);
 	
 		
 //		5

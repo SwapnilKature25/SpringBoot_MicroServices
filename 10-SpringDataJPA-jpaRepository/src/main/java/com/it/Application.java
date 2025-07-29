@@ -27,27 +27,30 @@ public class Application {
 		StudentRepository studentRepository = context.getBean(StudentRepository.class);
 	
 //		1
-//		Iterable<Student> findAll = studentRepository.findAll();
-//		findAll.forEach(System.out::println);
+		Iterable<Student> findAll = studentRepository.findAll();
+		findAll.forEach(System.out::println);
+		System.out.println("=======================================");
 		
 //		2  => Pagination concept
 		Scanner sc=new Scanner(System.in);
-		System.out.println("Enter page number : ");
+		System.out.println("Enter page number : ");   // For example, if the user enters 2, it means they want to see the second "page" of student records.
 		int pageNo = sc.nextInt();
-		int pageSize=3;
-//		page no. will start from 0
+		int pageSize=3;   // This defines how many records per page.
+//		page no. will start from 0 i.e Page number (0-based index) → that's why we subtract 1.
 		PageRequest pageReq = PageRequest.of(pageNo-1, pageSize);    // page 0 means page 1    // pageNo-1 it means we have to start from 0 i.e page 1
 		org.springframework.data.domain.Page<Student> page = studentRepository.findAll(pageReq);
 		List<Student> students=page.getContent();
 		students.forEach(System.out::println);
 	
-	
+		System.out.println("=======================================");
+		
 //		3  - sorting
 		
 //		List<Student> stds = studentRepository.findAll(Sort.by("gender"));		/// sorting based on gender,name,...
 		List<Student> stds = studentRepository.findAll(Sort.by("gender").descending());		/// sorting based on gender,name,...
 		stds.forEach(System.out::println);
 	
+		System.out.println("=======================================");
 	
 //		4  -- QueryByExample
 		Student s=new Student();
@@ -58,37 +61,42 @@ public class Application {
 		studs.forEach(System.out::println);
 		
 		
+		System.out.println("=======================================");
 		
-//		assignment : deleting a student
+//		remove student
 		studentRepository.deleteStudent(112);
 		System.out.println("Student deleted...");
 
+		System.out.println("=======================================");
+
 //		updating a record in table
-		studentRepository.updateStudent(111, "Male");
+		studentRepository.updateStudent(1, 110l);
 		System.out.println("Updated...");
 		
+//		System.out.println("=======================================");
 //		inserting record
 //		studentRepository.insertStudent(123, "Snoop", "Male", 170l);
 //		System.out.println("Inserted...");
 		
+		System.out.println("=======================================");
 //		fetch all
 		List<Student> allStds = studentRepository.getAllStds();
 		allStds.forEach(System.out::println);
 	
+		System.out.println("=======================================");
 
 //		* Timestamping in Data JPA + soft and hard delete
 		Student s2 = new Student(2, "Rani","Female",125l,"Y");
 		studentRepository.save(s2);
 		System.out.println("Record saved...");
 	
+		System.out.println("=======================================");
 		// soft delete i.e making data inactive
-		Student student = studentRepository.findById(2).get();
-		student.setActiveSW("N");
+		Student student = studentRepository.findById(1).get();
+		student.setActiveSW("Y");
 		studentRepository.save(student);
 //		Hibernate: update student_dtls set active_sw=?,student_gen=?,student_name=?,student_rank=?,updated_date=? where student_id=?
 
-		
-		
 		
 	}
 }

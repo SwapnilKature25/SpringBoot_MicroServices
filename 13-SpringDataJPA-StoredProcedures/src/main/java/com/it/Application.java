@@ -25,10 +25,8 @@ public class Application {
 		
 		List<Product> allProducts = productRepository.getAllProducts();
 		allProducts.forEach(System.out::println);
-		
-		
-	}
 
+	}
 }
 
 /*

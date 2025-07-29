@@ -33,27 +33,27 @@ public class Application {
 		 
 //		1 - insert
 		Employee e1=new Employee();
-		e1.setEmpName("Allen");
-		e1.setEmpSalary(5000.0);
+		e1.setEmpName("Eleven");
+		e1.setEmpSalary(50000.0);
 		
 		Address a1=new Address();
-		a1.setCity("Mumbai");
+		a1.setCity("Nagpur");
 		a1.setState("MH");
-		a1.setCity("India");
+		a1.setCountry("India");
 		a1.setEmp(e1);
 
 		Address a2=new Address();
-		a2.setCity("Jalna");
-		a2.setState("MH");
-		a2.setCity("India");
+		a2.setCity("Banglore");
+		a2.setState("KA");
+		a2.setCountry("India");
 		a2.setEmp(e1);
 		
 		// setting addresses to employee
 		List<Address> addrList = Arrays.asList(a1,a2);
 		e1.setAddr(addrList);
 		
-		empRepository.save(e1);
-		System.out.println("Record is inserted...");
+//		empRepository.save(e1);
+//		System.out.println("Record is inserted...");
 		
 //		if we don't use Casecade type as ALL for insertion operation then will not get error:
 		
@@ -65,10 +65,14 @@ public class Application {
 //		Whatever the operation i do on the parent that operation should reflect on child also.
 //		If we remove Cascade type then if we delete parent then only parent will be deleted child will not be deleted.
 //		But when you delete the parent we want to delete the child also for that we are giving Cascade type as ALL.
+
 //		empRepository.deleteById(3);
 //		System.out.println("Record is deleted...");
 		
-//		if we don't use Casecade type as ALL for deletion operation then we get : You are trying to persist or delete an entity (likely Address) that has a reference to another entity (Employee) that has not been saved to the database yet.
+		
+//		if we don't use Casecade type as ALL for deletion operation then we get error : You are trying to persist 
+//		or delete an entity (likely Address) that has a reference to another entity (Employee) that has not been saved to the database yet.
+		
 		
 //		3  - retrieve/fetching
 //		Here it will retrieve only parent record not child because fetch type is lazy loading.
@@ -76,8 +80,8 @@ public class Application {
 //		The default fetch type is lazy if i fetch parent record then it will fetch only parent record. Now if we want to fetch parent + child record then we will go with fetch = FetchType.EAGER.
 //		Cascade is applicable for non-select : insert , update and delete.
 //		fetch is applicable for select : fetching
-//		empRepository.findById(2);
-//		System.out.println("Record found...");
+		empRepository.findById(3);
+		System.out.println("Record found...");
 			
 //		if we don't use Casecade type as ALL for fetching operation then will not get error:
 		
@@ -85,8 +89,8 @@ public class Application {
 //		4  - retrieve by using child
 //		When you retrieve the child record it will retrieve child record + parent record.
 //		But when you retrieve the parent record it depends on fetch type.
-//		addressRepo.findById(3);
-//		System.out.println("Record found... (child + parent )");  // because parent reference will be available to child
+		addressRepo.findById(3);
+		System.out.println("Record found... (child + parent )");  // because parent reference will be available to child
 //		if we don't use Casecade type as ALL for fetching operation then will not get error:
 
 	}

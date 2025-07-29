@@ -37,11 +37,11 @@ public class AccountController {
 		return new ResponseEntity<>(accountService.createAccount(accDto), HttpStatus.CREATED);
 	}
 	
-	public ResponseEntity<AccountDto> getAllAccounts(){
-		AccountDto allAccounts = accountService.getAllAccounts();
-		return ResponseEntity.ok(allAccounts);
-	}
-	
+//	public ResponseEntity<AccountDto> getAllAccounts(){
+//		AccountDto allAccounts = accountService.getAllAccounts();
+//		return ResponseEntity.ok(allAccounts);
+//	}
+//	
 	// Get accept REST API
 	@GetMapping("/{id}")
 	public ResponseEntity<AccountDto> getAccountById(@PathVariable("id") Long id){

@@ -40,10 +40,7 @@ public class Student {
 	
 	public Student() {
 	}
-		
 	
-	
-
 	public Student(Integer id, String name, String gender, Long rank, String activeSW) {
 		super();
 		this.id = id;

@@ -17,8 +17,10 @@ public class Address {
 	private String state;
 	private String country;
 	
+//	Many Address objects → refer to One Employee.
 	@ManyToOne
 //	this annotation is used to represents a foreign key
+//	Without @JoinColumn, JPA will automatically generate a default column name like employee_empId.	
 	@JoinColumn(name="emp_id")  // to identify which address is belongs to which employee we are going to specify JoinColumn
 	private Employee emp;
 

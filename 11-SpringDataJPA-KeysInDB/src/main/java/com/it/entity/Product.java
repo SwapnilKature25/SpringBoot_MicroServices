@@ -25,9 +25,9 @@ public class Product {
 	private Integer productId;   // null
 	private String productName;   // null
 	private Double productPrice;  // null
-//	not recommended
+	
+//	Primitive datatypes are not recommended
 //	private int productId;   // 0
-//	private String productName;   // null
 //	private double productPrice;  // 0.0
 	
 	public Product() {

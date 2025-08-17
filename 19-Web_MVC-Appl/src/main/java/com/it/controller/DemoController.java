@@ -19,7 +19,7 @@ public class DemoController {
 		ModelAndView mav=new ModelAndView();
 		mav.addObject("msg",msgTxt);
 		mav.setViewName("index");
-		return mav;
+		return mav; 
 	}
 	
 //	url patter : http://localhost:8081/demo2/john

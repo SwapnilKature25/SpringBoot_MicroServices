@@ -12,6 +12,7 @@ public class Employee {
 	private Integer empId;
 	private String ename;
 	private Double esal;
+	
 	public Integer getEmpId() {
 		return empId;
 	}

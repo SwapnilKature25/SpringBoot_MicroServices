@@ -26,14 +26,14 @@ public class Application {
 		
 		PersonRepository personRepo = context.getBean(PersonRepository.class);
 		PassportRepository passportRepo = context.getBean(PassportRepository.class);
-		/*
+		
 //		1
 		Person person=new Person();
-		person.setPersonName("Ashok");
+		person.setPersonName("Swap");
 		person.setPersonGender("Male");
 		
 		Passport passport=new Passport();
-		passport.setPassportNum("KV780899");
+		passport.setPassportNum("MK780899");
 		passport.setIssuedDate(LocalDate.now());
 		passport.setExpiryDate(LocalDate.now().plusYears(10));
 		
@@ -42,7 +42,7 @@ public class Application {
 		
 		personRepo.save(person);
 		System.out.println("Record inserted...");
-		*/
+		
 		
 //		2
 //		personRepo.findById(1);
@@ -50,7 +50,7 @@ public class Application {
 		
 		
 //		3 
-		personRepo.deleteById(1);  // cascade : whenever you perform operationns on the parent it will reflect on the child also
+		personRepo.deleteById(2);  // cascade : whenever you perform operationns on the parent it will reflect on the child also
 		System.out.println("Record deleted...");
 		
 	}

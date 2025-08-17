@@ -21,7 +21,7 @@ public class WelcomeController {
 		this.application = application;
 	}
 	
-//	 whenever we send get request with welcome parameter this method will be calledd	
+//	 whenever we send get request with welcome parameter this method will be called	
 	@GetMapping("/welcome")   // means it is a doGet(), it is responsible to handle get request
 	public ModelAndView getWelcomeMsg() {
 		System.out.println("WelcomeController.getWelcomeMsg() :: method executed");

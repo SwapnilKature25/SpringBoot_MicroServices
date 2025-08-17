@@ -14,6 +14,6 @@ public class MyController {
 	@GetMapping("/home")
 	public List<Course> getCoursess() {
 		
-		return "Welcome to course appl";
+		return null;
 	}
 }

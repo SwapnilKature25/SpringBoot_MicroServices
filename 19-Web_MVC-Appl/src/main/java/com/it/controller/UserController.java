@@ -19,9 +19,7 @@ public class UserController {
 		mav.addObject("id",101);
 		mav.addObject("name","Raju");
 		mav.addObject("email","Raju@gmail.com");
-		
 		mav.setViewName("user");
-		
 		return mav;
 	}
 }

@@ -15,6 +15,7 @@ public class Emp {
 	private Integer empId;
 	private String empName;
 	private Double empSal;
+	
 	public Integer getEmpId() {
 		return empId;
 	}

@@ -31,7 +31,6 @@ public class MakeMyTripService {
 		ResponseEntity<Ticket> forEntity = rt.postForEntity(apiUrl, p, Ticket.class);  // Ticket.class represents what response we are expecting from provider 
 		
 		Ticket body = forEntity.getBody();
-		
 		return body;
 	}
 	

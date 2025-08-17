@@ -17,8 +17,11 @@ public class Person {
 	private String personGender;
 	// person is related to the passport with one to one 
 	// passport is mapped to person and person is mapped to passport
+	//	 mappedBy will represent current passport belongs to which person.
 	@OneToOne(mappedBy = "person", cascade = CascadeType.ALL)
 	private Passport passport;
+	
+	
 	public Integer getPersonId() {
 		return personId;
 	}

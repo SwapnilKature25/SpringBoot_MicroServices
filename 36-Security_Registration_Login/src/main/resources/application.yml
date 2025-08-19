@@ -1,0 +1,15 @@
+# Conversion to YAML from Properties formar report
+# Warnings:
+# - The yaml file had comments which are lost in the refactoring!
+spring:
+  application:
+    name: 36-Security_Registration_Login
+  datasource:
+    url: jdbc:mysql://localhost:3306/sbms27
+    username: root
+    password: Swap25
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: 'update'
+    show-sql: 'true'

@@ -13,7 +13,8 @@ public class Application {
 		ConfigurableApplicationContext context = SpringApplication.run(Application.class, args);
 		
 		QuoteService bean=context.getBean(QuoteService.class);
-		bean.getQuoteV1();
+//		bean.getQuoteV1();
+		bean.getQuoteV2();
 	
 	}
 

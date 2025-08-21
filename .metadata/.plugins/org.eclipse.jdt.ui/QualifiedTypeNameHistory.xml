@@ -30,7 +30,6 @@
     <fullyQualifiedTypeName name="com.it.mapper.AccountMapper"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.BeanFactory"/>
     <fullyQualifiedTypeName name="org.springframework.web.reactive.function.client.WebClient"/>
-    <fullyQualifiedTypeName name="com.it.service.QuoteService"/>
     <fullyQualifiedTypeName name="org.springframework.security.provisioning.InMemoryUserDetailsManager"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
     <fullyQualifiedTypeName name="org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder"/>
@@ -60,4 +59,5 @@
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
     <fullyQualifiedTypeName name="org.springframework.security.authentication.UsernamePasswordAuthenticationToken"/>
     <fullyQualifiedTypeName name="org.springframework.http.HttpStatus"/>
+    <fullyQualifiedTypeName name="com.it.service.QuoteService"/>
 </qualifiedTypeNameHistroy>

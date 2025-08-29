@@ -19,7 +19,6 @@
         <property name="eng" ref="petrolEng"></property>  
     	<!-- constructor-arg for constructor injection configuration -->
     	<constructor-arg ref="dieselEng" ></constructor-arg>
-    	
     </bean>
 </beans>
 

@@ -1,4 +1,4 @@
-package com.it.beans;
+ package com.it.beans;
 
 public class Car {
 	

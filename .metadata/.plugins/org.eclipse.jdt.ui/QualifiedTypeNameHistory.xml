@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.springframework.web.servlet.config.annotation.CorsRegistry"/>
-    <fullyQualifiedTypeName name="org.springframework.http.HttpMethod"/>
-    <fullyQualifiedTypeName name="com.it.entity.Book"/>
-    <fullyQualifiedTypeName name="org.hibernate.boot.Metadata"/>
     <fullyQualifiedTypeName name="org.yaml.snakeyaml.events.Event.ID"/>
     <fullyQualifiedTypeName name="com.it.repository.AccountRepository"/>
     <fullyQualifiedTypeName name="lombok.AllArgsConstructor"/>
@@ -60,4 +56,8 @@
     <fullyQualifiedTypeName name="java.sql.Date"/>
     <fullyQualifiedTypeName name="jakarta.validation.constraints.NotEmpty"/>
     <fullyQualifiedTypeName name="jakarta.validation.constraints.Email"/>
+    <fullyQualifiedTypeName name="org.apache.catalina.core.ApplicationContext"/>
+    <fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
+    <fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
+    <fullyQualifiedTypeName name="com.it.beans.ATM"/>
 </qualifiedTypeNameHistroy>

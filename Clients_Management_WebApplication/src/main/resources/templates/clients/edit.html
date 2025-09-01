@@ -10,10 +10,18 @@
 	<div class="container my-4">
 	    <div class="row">
 	        <div class="col-md-8 max-auto rounded border p-4" >
-	            <h2 class="text-center mb-5">New Client</h2>
+	            <h2 class="text-center mb-5">Edit Client</h2>
 
 	            <form method="post" data-th-action="@{/clients/create}" data-th-object="${clientDto}">
-	                <div class="row mb-3">
+	                
+					<div class="row mb-3">
+						   <label class="col-sm-4 col-form-label">Client ID</label>
+						   <div class="col-sm-8">
+						       <input class="form-control-plaintext" readonly th:value="${client.id}">               
+						   </div>
+				 	</div>
+					
+					<div class="row mb-3">
 	                    <label class="col-sm-4 col-form-label">First Name</label>
 	                    <div class="col-sm-8">
 	                        <input class="form-control" th:field="*{firstName}">
@@ -81,7 +89,13 @@
 	                    </div>
 	                </div>
 
-
+					<div class="row mb-3">
+								<label class="col-sm-4 col-form-label">Created At</label>
+								<div class="col-sm-8">
+									<input class="form-control-plaintext" readonly th:value="${client.createdAt}">               
+							</div>
+					</div>
+ 
 	                <div class="row">
 	                    <div class="offset-sm-4 col-sm-4 d-grid">
 	                        <button type="submit" class="btn btn-primary">Submit</button>

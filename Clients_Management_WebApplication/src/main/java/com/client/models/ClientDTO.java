@@ -23,4 +23,5 @@ public class ClientDTO {
 	@NotEmpty(message = "The Status is required")
 	private String status;  // New, Permanent, Lead, Occasional, Inactive
 	
+	
 }

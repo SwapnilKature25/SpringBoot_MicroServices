@@ -2,18 +2,6 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
-			<item value="C:\Users\swapn\01CJ\Spring_Boot_MicroServices\01-IOC-ATMProj"/>
-			<item value="C:\Users\swapn\01CJ\Spring_Boot_MicroServices\01-IOC-ATMProject\src\main\java\com\it\Application.java"/>
-			<item value="C:\Users\swapn\01CJ\Spring_Boot_MicroServices\00-App1_DependencyInjection"/>
-			<item value="C:\Users\swapn\01CJ\Spring_Boot_MicroServices\01-IOC-ATMProject\src\main\java\com\it\test\Test.java"/>
-			<item value="C:\Users\swapn\01CJ\Spring_Boot_MicroServices\Clients_Management_WebApplication\src\main\resources\templates\index.html"/>
-			<item value="C:\Users\swapn\01CJ\Spring_Boot_MicroServices\Hibernate_Practice_Project\pom.xml"/>
-			<item value="C:\Users\swapn\01CJ\Spring_Boot_MicroServices\35-Security_JDBC_Auth\src\main\java\com\it\rest\UserRestController.java"/>
-			<item value="C:\Users\swapn\01CJ\Spring_Boot_MicroServices\20-Web_MVC-BookApp\src\main\java\com\it\controller\BookController.java"/>
-			<item value="C:\Users\swapn\01CJ\Spring_Boot_MicroServices\04-BeanLifecycle-App\src\main\java\com\it\main\MainApp.java"/>
-			<item value="C:\Users\swapn\01CJ\Spring_Boot_MicroServices\01-IOC-DIApp\pom.xml"/>
-			<item value="C:\Users\swapn\01CJ\Spring_Boot_MicroServices\01_IOC_DependencyInjectionApp\pom.xml"/>
-			<item value="C:\Users\swapn\01CJ\Spring_Boot_MicroServices\App1_DependencyInjection\src\com\it\MainClass.java"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -37,13 +25,10 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="com.nit._IOC_ATMProject_DI"/>
 		</list>
 		<list key="groupId">
-			<item value="com.nit"/>
 		</list>
 		<list key="artifactId">
-			<item value="01-IOC-ATMProject-DI"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -59,10 +44,12 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="com.nit"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="02_IOC_app"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -94,5 +81,17 @@
 		</list>
 	</section>
 	<section name="org.eclipse.m2e.core.ui.internal.wizards.CustomArchetypeDialog">
+	</section>
+	<section name="MavenCheckoutLocationPage">
+		<list key="scmUrl">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
 	</section>
 </section>

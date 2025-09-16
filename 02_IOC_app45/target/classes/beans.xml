@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="pwd" class="com.it.beans.PwdService"/>
+    <bean id="dao" class="com.it.beans.UserDao"/>
+    <bean id="email" class="com.it.beans.EmailService"/>
+
+    <bean id="uservice" class="com.it.beans.UserService">
+    	<!-- configuring setter injection -->
+    	<property name="pwdService" ref="pwd"></property>
+    	<property name="userDao" ref="dao"></property>
+    	<property name="emailService" ref="email"></property>
+    </bean>
+
+	<bean id="ctrl" class="com.it.beans.UserController">
+	    <!-- configuring constructor injection -->
+		<!-- name attribute will point to instance variable name of userController class and
+		 we are injecting userService bean id to ref attribute of userController -->
+		<constructor-arg name="userService" ref="uservice"></constructor-arg>
+	</bean>
+</beans>

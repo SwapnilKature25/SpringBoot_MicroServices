@@ -1,0 +1,48 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  </head>
+  <body>
+    
+	<div class="container">
+		
+		<h2>User Registration</h2>
+		<font style="color: green;">
+		    <p th:text="${smsg}"></p>
+		</font>
+		<font style="color: red;">
+		    <p th:text="${emsg}"></p>
+		</font>
+		
+		<form th:action="@{/saveUser}" th:object="${user}"  method="post">
+		    <table>
+		        <tr>
+		            <td>Name</td>
+		            <td><input type="text" th:field="*{fullName}"></td>
+		        </tr>
+		        <tr>
+		            <td>Email</td>
+		            <td><input type="text" th:field="*{email}"></td>
+		        </tr>
+		        <tr>
+		            <td>Password</td>
+		            <td><input type="text" th:field="*{pwd}"></td>
+		        </tr>
+		        <tr>
+		            <td>Mobile Number</td>
+		            <td><input type="text" th:field="*{phno}"></td>
+		        </tr>
+		        <tr>
+		            <td></td>
+		            <td><input type="submit" value="Submit" class="btn btn-primary"></td>
+					  
+				</tr>
+		    </table>
+		</form>		
+	</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>

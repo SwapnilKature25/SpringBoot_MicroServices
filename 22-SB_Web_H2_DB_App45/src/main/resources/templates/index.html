@@ -22,19 +22,40 @@
 		        <tr>
 		            <td>Name</td>
 		            <td><input type="text" th:field="*{fullName}"></td>
+					<td>
+						<font style="color:red;">
+							<p th:if="${#fields.hasErrors('fullName')}" th:errors="*{fullName}"> </p>					
+						</font>
+					</td>
 		        </tr>
 		        <tr>
 		            <td>Email</td>
 		            <td><input type="text" th:field="*{email}"></td>
-		        </tr>
+					<td>
+						<font style="color:red;">
+						 <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}"> </p>					
+						</font>
+					 </td>
+					
+				</tr>
 		        <tr>
 		            <td>Password</td>
-		            <td><input type="text" th:field="*{pwd}"></td>
+		            <td><input type="password" th:field="*{pwd}"></td>
+					<td>
+						<font style="color:red;">
+						<p th:if="${#fields.hasErrors('pwd')}" th:errors="*{pwd}"> </p>					
+						</font>
+					 </td>
 		        </tr>
 		        <tr>
 		            <td>Mobile Number</td>
-		            <td><input type="text" th:field="*{phno}"></td>
-		        </tr>
+		            <td><input type="number" th:field="*{phno}"></td>
+					<td>
+						<font style="colo:red;">
+						<p th:if="${#fields.hasErrors('phno')}" th:errors="*{phno}"> </p>					
+						</font> 
+					</td>
+				</tr>
 		        <tr>
 		            <td></td>
 		            <td><input type="submit" value="Submit" class="btn btn-primary"></td>

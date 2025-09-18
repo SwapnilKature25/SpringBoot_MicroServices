@@ -1,0 +1,6 @@
+<form th:action="@{/contacts/add}" method="post" th:object="${contact}">
+    Name: <input type="text" th:field="*{name}"/><br/>
+    Phone: <input type="text" th:field="*{phone}"/><br/>
+    Email: <input type="email" th:field="*{email}"/><br/>
+    <button type="submit">Save</button>
+</form>

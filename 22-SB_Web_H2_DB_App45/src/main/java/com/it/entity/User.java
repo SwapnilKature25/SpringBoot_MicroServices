@@ -5,11 +5,16 @@ import java.time.LocalDateTime;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 
 @Entity
 @Table(name="user_master")
@@ -19,9 +24,18 @@ public class User {
 	@Id	
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer uid;
+	
+	@NotNull(message="Name is mandatory")
+	@Size(min=3, max=8, message="Min 3 and Max 8 chars allowed")
 	private String fullName;
-	private String pwd;
+	@Column(unique=true)
+	@Email(message="Enter valid Email")
+	@NotNull(message="Email is mandatory")
 	private String email;
+
+	@NotNull(message="Password is mandatory")
+	private String pwd;
+
 	private Long phno;
 	
 	@CreationTimestamp

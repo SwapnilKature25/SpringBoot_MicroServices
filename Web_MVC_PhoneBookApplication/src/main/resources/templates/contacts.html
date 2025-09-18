@@ -1,0 +1,10 @@
+<h2>Your Contacts</h2>
+<table>
+<tr><th>Name</th><th>Phone</th><th>Email</th></tr>
+<tr th:each="c : ${contacts}">
+  <td th:text="${c.name}"></td>
+  <td th:text="${c.phone}"></td>
+  <td th:text="${c.email}"></td>
+</tr>
+</table>
+<a href="/dashboard">Back</a>

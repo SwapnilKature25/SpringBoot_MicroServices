@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\swapn\01CJ\Spring_Boot_MicroServices\26-SB-REST-API-JSON-Response\src\main\java\com\it\Application.java"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -44,11 +45,13 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="com.it"/>
 			<item value="com.nit"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="24-RestAPI-Jackson_App45"/>
 			<item value="02_IOC_app"/>
 		</list>
 		<list key="projectNameTemplate">
